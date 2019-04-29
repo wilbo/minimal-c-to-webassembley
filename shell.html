@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>A WebAssembley function</title>
+  </head>
+  <body>
+    <button class="mybutton">Run function</button>
+    <script>
+      document.querySelector(".mybutton").addEventListener("click", function() {
+        var result = Module.ccall(
+          "myFunction", // name of C function
+          null, // return type
+          null, // argument types
+          null // arguments
+        );
+      });
+    </script>
+    {{{ SCRIPT }}}
+  </body>
+</html>

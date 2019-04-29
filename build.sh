@@ -1,0 +1,1 @@
+emcc -o index.html main.c -O3 -s WASM=1 --shell-file shell.html -s NO_EXIT_RUNTIME=1  -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall"]' && rm -rf dist && mkdir dist && mv index.html dist/index.html && mv index.js dist/index.js && mv index.wasm dist/index.wasm
